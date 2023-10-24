@@ -14,7 +14,6 @@ export class TemplateComponent {
 
   click(number: number) {
     this.setTimer = number;
-    console.log(this.setTimer);
     if (number === 1) {
       this.img = this.data.images.planet;
       this.url = 'new-url-1';
