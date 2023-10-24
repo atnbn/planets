@@ -1,0 +1,282 @@
+header {
+    border-bottom: 1px solid rgb(56, 56, 79);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 96px;
+}
+
+h2 {
+    margin-left: 25px;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: antmedium;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    margin-right: 25px;
+    align-items: center;
+    height: 100%;
+}
+
+span {
+    color: #ffffffbf;
+    font-family: spartabold;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.link__con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.link {
+    height: 96%;
+    display: flex;
+    align-items: center;
+    border-top: 4px solid transparent;
+}
+.link:hover {
+    cursor: pointer;
+}
+
+.active {
+    border-top: 4px solid #fff;
+}
+
+.hover-a:hover {
+    color: #ffff;
+    border-top: 4px solid var(--mercury);
+}
+
+.hover-b:hover {
+    color: #ffff;
+    border-top: 4px solid #eda249;
+}
+
+.hover-c:hover {
+    color: #ffff;
+    border-top: 4px solid #6f2ed6;
+}
+
+.hover-d:hover {
+    color: #ffff;
+    border-top: 4px solid #d14c32;
+}
+
+.hover-e:hover {
+    color: #ffff;
+    border-top: 4px solid #d93a34;
+}
+
+.hover-f:hover {
+    color: #ffff;
+    border-top: 4px solid #cd5120;
+}
+.hover-g:hover {
+    color: #ffff;
+    border-top: 4px solid #1ec2a4;
+}
+
+.hover-h:hover {
+    color: #ffff;
+    border-top: 4px solid #2d68f0;
+}
+
+.tablet__nav {
+    display: none;
+}
+.d-none {
+    display: none;
+    animation: 1s slideoff;
+}
+.d-block {
+    display: block;
+}
+.responsiv-icon {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .desktop__nav {
+        display: none;
+    }
+
+    .tablet__nav {
+        display: flex;
+    }
+
+    header {
+        height: 100px;
+        flex-direction: column;
+    }
+    h2 {
+        margin: 0;
+        margin-top: 10px;
+    }
+    nav {
+        align-items: start;
+    }
+
+    .link {
+        border-bottom: 0px;
+    }
+    .dot {
+        position: relative;
+        color: var(--lightgray); /* Set the text color */
+        padding-bottom: 5px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%; /* Position the dot at the bottom-right corner of the link */
+            width: 10px; /* Adjust the width and height to create a circular dot */
+            height: 10px;
+            background-color: var(--lightgray); /* Use the custom variable for the dot color */
+            border-radius: 50%; /* Make it a circle */
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .test {
+        display: flex;
+        justify-content: center;
+    }
+    .responsiv-icon {
+        display: flex !important;
+        margin-right: 15px;
+    }
+    header {
+        height: 60px;
+        flex-direction: row;
+    }
+    .tablet__nav {
+        display: none;
+    }
+    h2 {
+        align-self: flex-start;
+        justify-self: center;
+        margin-left: 15px;
+    }
+    .mobile__nav {
+        background-color: var(--dark);
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        top: 61px;
+        left: 0;
+        flex-direction: column;
+    }
+
+    .link {
+        height: 10px;
+        font-size: 15px;
+    }
+    .mobile__nav__con {
+        flex-direction: column;
+        display: flex;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    nav {
+        div {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+            height: 35px;
+            gap: 15px;
+            border-bottom: 1px solid var(--gray);
+            span {
+                color: #ffff;
+            }
+
+            img {
+                align-self: flex-end;
+
+                position: absolute;
+                right: 5px;
+                top: 10px;
+            }
+        }
+    }
+    .nav__dot {
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+    }
+    .end {
+        margin-left: auto;
+    }
+}
+
+.mercury {
+    background-color: var(--mercury);
+}
+
+.venus {
+    background-color: var(--venus);
+}
+
+.earth {
+    background-color: var(--earth);
+}
+
+.mars {
+    background-color: var(--mars);
+}
+
+.jupiter {
+    background-color: var(--jupiter);
+}
+
+.saturn {
+    background-color: var(--saturn);
+}
+
+.uranus {
+    background-color: var(--uranus);
+}
+.neptune {
+    background-color: var(--neptune);
+}
+.open {
+    animation: slide 1s;
+}
+.close {
+    animation: slide 1s reverse;
+}
+@keyframes slide {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideoff {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

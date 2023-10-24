@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --mercury: #419ebb;
+    --earth: #6f2ed6;
+    --venus: #eda249;
+    --mars: #d14c32;
+    --jupiter: #d93a34;
+    --saturn: #cd5120;
+    --uranus: #1ec2a4;
+    --neptune: #2d68f0;
+    --gray: rgb(56, 56, 79);
+    --dark: rgb(7, 7, 36);
+    --lightgray: #838391;
+    // height
+
+    --headertablet: 140px;
+}
+
+body {
+    background-image: url("/assets/images/background-stars.svg");
+    background-color: var(--dark);
+    margin: 0;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: antmedium;
+    src: url("/assets/fonts/Antonio-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: antregular;
+    src: url("/assets/fonts/Antonio-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: spartabold;
+    src: url("/assets/fonts/LeagueSpartan-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: spartamediuam;
+    src: url("/assets/fonts/LeagueSpartan-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: spartaregular;
+    src: url("/assets/fonts/LeagueSpartan-Regular.ttf");
+    font-weight: 400;
+}
+.disable-scroll {
+    overflow: hidden;
+}

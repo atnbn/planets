@@ -1,0 +1,125 @@
+<section *ngIf="data">
+  <div class="con">
+    <nav class="select__con">
+      <div
+        [ngStyle]="
+          setTimer === 1 ? { 'border-bottom': '2px solid ' + color } : {}
+        "
+        (click)="click(1)"
+      >
+        <span>OVERVIEW</span>
+      </div>
+      <div
+        [ngStyle]="
+          setTimer === 2 ? { 'border-bottom': '2px solid ' + color } : {}
+        "
+        (click)="click(2)"
+      >
+        <span>INTERNAL STRUCTURE</span>
+      </div>
+      <div
+        [ngStyle]="
+          setTimer === 3 ? { 'border-bottom': '2px solid ' + color } : {}
+        "
+        (click)="click(3)"
+      >
+        <span>SURFACE GEOLOGY</span>
+      </div>
+    </nav>
+    <div class="img__con">
+      <img
+        class="img d-none"
+        [src]="data.images.planet"
+        [ngClass]="{ currentImage: setTimer !== 2 }"
+      />
+      <img
+        class="img d-none"
+        [src]="data.images.internal"
+        [ngClass]="{ currentImage: setTimer === 2 }"
+      />
+      <img
+        class="img fixed d-none"
+        [src]="data.images.geology"
+        [ngClass]="{ currentImage: setTimer === 3 }"
+      />
+    </div>
+    <div class="details__right">
+      <div class="description__con">
+        <h2>{{ data.name }}</h2>
+        <span class="description__right" *ngIf="setTimer === 1">{{
+          data.overview.content
+        }}</span>
+        <span class="description__right" *ngIf="setTimer === 2">{{
+          data.structure.content
+        }}</span>
+        <span class="description__right" *ngIf="setTimer === 3">{{
+          data.geology.content
+        }}</span>
+        <span class="source"
+          >Source:
+          <a
+            *ngIf="setTimer === 1"
+            target="#blank"
+            href="{{ data.overview.source }}"
+            >Wikipedia</a
+          >
+          <a
+            *ngIf="setTimer === 2"
+            target="#blank"
+            href="{{ data.structure.source }}"
+            >Wikipedia</a
+          >
+          <a
+            *ngIf="setTimer === 3"
+            target="#blank"
+            href="{{ data.geology.source }}"
+            >Wikipedia</a
+          >
+
+          <img src="/assets/images/header/icon-source.svg"
+        /></span>
+      </div>
+      <nav class="select__desktop">
+        <div
+          [ngStyle]="setTimer === 1 ? { 'background-color': color } : {}"
+          (click)="click(1)"
+        >
+          <span>01</span>
+          <span>OVERVIEW</span>
+        </div>
+        <div
+          [ngStyle]="setTimer === 2 ? { 'background-color': color } : {}"
+          (click)="click(2)"
+        >
+          <span>02</span>
+          <span>INTERNAL STRUCTURE</span>
+        </div>
+        <div
+          [ngStyle]="setTimer === 3 ? { 'background-color': color } : {}"
+          (click)="click(3)"
+        >
+          <span>03</span>
+          <span>SURFACE GEOLOGY</span>
+        </div>
+      </nav>
+    </div>
+    <div class="details__bottom">
+      <div>
+        <span class="title__below">ROTATION TIME</span>
+        <span class="description__below">{{ data.rotation }}</span>
+      </div>
+      <div>
+        <span class="title__below">REVOLUTION TIME</span>
+        <span class="description__below">{{ data.revolution }}</span>
+      </div>
+      <div>
+        <span class="title__below">RADIUS</span>
+        <span class="description__below">{{ data.radius }}</span>
+      </div>
+      <div>
+        <span class="title__below">AVERAGE TEMP.</span>
+        <span class="description__below">{{ data.temperature }}</span>
+      </div>
+    </div>
+  </div>
+</section>
