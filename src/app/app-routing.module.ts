@@ -10,8 +10,7 @@ import { UranusComponent } from './features/uranus/uranus.component';
 import { NeptuneComponent } from './features/neptune/neptune.component';
 
 const routes: Routes = [
-  { path: '**', redirectTo: 'mercury', pathMatch: 'full' },
-  { path: 'mercury', component: MercuryComponent },
+  { path: '**', component: MercuryComponent },
   { path: 'venus', component: VenusComponent },
   { path: 'earth', component: EarthComponent },
   { path: 'mars', component: MarsComponent },
