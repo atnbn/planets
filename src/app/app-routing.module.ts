@@ -10,14 +10,14 @@ import { UranusComponent } from './features/uranus/uranus.component';
 import { NeptuneComponent } from './features/neptune/neptune.component';
 
 const routes: Routes = [
-  { path: '**', component: MercuryComponent },
-  { path: '#/venus', component: VenusComponent },
-  { path: '#/earth', component: EarthComponent },
-  { path: '#/mars', component: MarsComponent },
-  { path: '#/jupiter', component: JupiterComponent },
-  { path: '#/saturn', component: SaturnComponent },
-  { path: '#/uranus', component: UranusComponent },
-  { path: '#/neptune', component: NeptuneComponent },
+  { path: 'mercury', component: MercuryComponent },
+  { path: 'venus', component: VenusComponent },
+  { path: 'earth', component: EarthComponent },
+  { path: 'mars', component: MarsComponent },
+  { path: 'jupiter', component: JupiterComponent },
+  { path: 'saturn', component: SaturnComponent },
+  { path: 'uranus', component: UranusComponent },
+  { path: 'neptune', component: NeptuneComponent },
 ];
 
 @NgModule({
